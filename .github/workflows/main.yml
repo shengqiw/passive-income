@@ -31,5 +31,7 @@ jobs:
           role-to-assume: arn:aws:iam::394414610569:role/shen-bot
           aws-region: us-east-1
 
-        
+      - name: get caller identity2
+        run: |
+          aws s3 ls        
     
