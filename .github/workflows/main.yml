@@ -21,5 +21,11 @@ jobs:
       - name: Install dependencies
         run: echo 'Hello World'
 
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::394414610569:role/shen-bot
+          aws-region: us-east-1
+
         
     
