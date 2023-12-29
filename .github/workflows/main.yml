@@ -39,7 +39,7 @@ jobs:
         run: |
           aws s3 ls 
           aws sts get-caller-identity
+          terraform plan -out "tfplan"
           pwd
           ls
-          terraform apply -auto-approve ./terraform/main.tf
     
