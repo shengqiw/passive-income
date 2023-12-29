@@ -24,7 +24,10 @@ jobs:
           node-version: '21'
 
       - name: Install dependencies
-        run: echo 'Hello World'
+        run: |
+          echo 'Hello World'
+          terraform --version
+
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -36,4 +39,5 @@ jobs:
         run: |
           aws s3 ls 
           aws sts get-caller-identity
+          terraform apply -auto-approve ./terraform
     
