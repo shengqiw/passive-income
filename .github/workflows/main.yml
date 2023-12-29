@@ -38,10 +38,11 @@ jobs:
       - name: get caller identity
         run: |
           aws s3 ls 
-          aws sts get-caller-identity
+          echo "$GITHUB_REPOSITORY"
           cd terraform
           terraform init
           terraform plan -out "tfplan"
+          terraform apply tfplan
           pwd
           ls
     
