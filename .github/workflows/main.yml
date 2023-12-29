@@ -35,5 +35,5 @@ jobs:
       - name: get caller identity
         run: |
           aws s3 ls 
-          aws get-caller-identity
+          aws sts get-caller-identity
     
