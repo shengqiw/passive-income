@@ -39,6 +39,7 @@ jobs:
         run: |
           aws s3 ls 
           aws sts get-caller-identity
+          cd terraform
           terraform plan -out "tfplan"
           pwd
           ls
