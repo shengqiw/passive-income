@@ -41,5 +41,5 @@ jobs:
           aws sts get-caller-identity
           pwd
           ls
-          terraform apply -auto-approve ../../terraform/
+          terraform apply -auto-approve ./terraform/main.tf
     
